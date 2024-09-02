@@ -1,7 +1,20 @@
-valeur = input("Entre un température en Celcius")
+valeur = -1  # Initialize as an integer to start the loop
 
-valeurnum = float(valeur)
+# Loop until the user enters a positive number
+while valeur < 0:
+    valeur_str = input("Entre une température en Celsius (doit être positive) : ")
+    
+    # Try to convert the input to a float
+    try:
+        valeur = float(valeur_str)  # Convert string to float
+        if valeur < 0:
+            print("La température doit être un nombre positif. Essayez encore.")
+    except ValueError:
+        print("Veuillez entrer un nombre valide.")
+        valeur = -1  # Reset valeur to ensure the loop repeats
 
-Farenheit = valeurnum * (9/5) + 32
+# Convert Celsius to Fahrenheit
+Farenheit = valeur * (9/5) + 32
 
-print(" "+valeur+" en Farenheit est : "+ str(Farenheit))
+# Print the result
+print(f"{valeur}°C en Farenheit est : {Farenheit}°F")
