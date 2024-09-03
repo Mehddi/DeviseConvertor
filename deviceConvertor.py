@@ -18,3 +18,5 @@ Farenheit = valeur * (9/5) + 32
 
 # Print the result
 print(f"{valeur}°C en Farenheit est : {Farenheit}°F")
+
+#test
